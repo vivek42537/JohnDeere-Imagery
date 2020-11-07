@@ -12,8 +12,8 @@ img = cv2.imread('C:\\Users\\surya\\Documents\\PURDUE\\Datamine\\John Deere\\Sat
 
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-lower_green = np.array([20, 45, 160])
-upper_green = np.array([100, 80, 200])
+lower_green = np.array([25, 40, 150])
+upper_green = np.array([95, 85, 200])
 
 mask = cv2.inRange(hsv, lower_green, upper_green)
 res = cv2.bitwise_and(img, img, mask = mask)
